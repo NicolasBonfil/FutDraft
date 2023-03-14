@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#caja{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-image: url(../img/fondo-draft.png);
+}
+
+.logo img{
+    width: 225px;
+    height: 49.875;
+}
+
+.logo{
+    padding: 15px 0px 0px 25px;
+}
+
+#cancha{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.carta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    line-height: 10px;
+}
+
+.prueba{
+    border-radius: 50%;
+    padding: 8px 10px 6px 10px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    position: absolute;
+    top: 75px;
+    color: white;
+    font-family: "Roboto Condensed";
+    font-size: 13px;
+    box-shadow: inset 0px -4px rgba(0, 0, 0, 0.7);
+}
+
+.carta:hover .prueba{
+    border: 2px solid lightskyblue;
+}
+
+#POR{
+    grid-area: POR;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LD{
+    grid-area: LD;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#DFCd{
+    grid-area: DFCd;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#DFCi{
+    grid-area: DFCi;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#LI{
+    grid-area: LI;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#MCD{
+    grid-area: MCD;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#MCi{
+    grid-area: MCi;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#MCd{
+    grid-area: MCd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ED{
+    grid-area: ED;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#DC{
+    grid-area: DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#EI{
+    grid-area: EI;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#equipo{
+    background-image: url("../img/cancha-futbol.jpeg");
+    width: 440px;
+    height: 660px;
+    padding: 15px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "EI DC DC ED"
+    "MCi MCD MCD MCd"
+    "LI DFCi DFCd LD"
+    "POR POR POR POR";
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carta-draft{
+    height: 80px;
+    width: 64.32px;
+}
+
+#cancha-selector{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 440px;
+    height: 660px;
+    position: absolute;
+    z-index: 1;
+}
+
+#selector{
+    border: 3px solid black;
+    border-radius: 0px 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/fondo-draft.png");
+}
+
+#selector-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+#selector-header h2{
+    color: white;
+    font-family: "Poppins", "sans-serif";
+    font-size: 16px;
+    line-height: 0;
+    margin: 0;
+}
+
+#ojo{
+    filter: brightness(1.1);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#selector-body{
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    background-color: transparent;
+}
+
+.divCarta{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 7px;
+}
+
+#selector-body .divCarta:hover{
+    background-color: orangered;
+}
+
+#carta-0, #carta-2, #carta-4{
+    background-color: rgba(24, 24, 24, 0.95);
+}
+
+#carta-1, #carta-3{
+    background-color: rgba(35, 35, 35, 0.95);
+}
+
+.imagenJugador{
+    height: 80px;
+    width: 80px;
+    display: flex;
+}
+
+.jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-jugador{
+    padding: 2px;
+    background-color: #444444;
+    color: white;
+}
