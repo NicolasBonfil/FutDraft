@@ -121,7 +121,7 @@ const crearCancha = () => {
         carta.innerHTML = `
                         <div class = "carta">
                             <button id = "boton${posicion}" class = "botonJugador"><img src="./img/draft_card.png" alt="" class="carta-draft"></button>
-                            <div class = "prueba">${posicion}</div>
+                            <div class = "circuloPosicion">${posicion}</div>
                         </div>
                     `
         cancha.appendChild(carta);

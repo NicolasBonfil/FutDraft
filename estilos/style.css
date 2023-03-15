@@ -8,11 +8,11 @@
 }
 
 #caja{
+    display: flex;
+    flex-direction: row;
     height: 100vh;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
     background-image: url(../img/fondo-draft.png);
+    position: relative;
 }
 
 .logo img{
@@ -21,24 +21,25 @@
 }
 
 .logo{
-    padding: 15px 0px 0px 25px;
+    padding: 20px 0px 0px 20px;
+    width: 33.33%;
 }
 
 #cancha{
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0;
 }
 
 .carta{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     line-height: 10px;
+    position: relative;
 }
 
-.prueba{
+.circuloPosicion{
     border-radius: 50%;
     padding: 8px 10px 6px 10px;
     width: 40px;
@@ -139,7 +140,6 @@
     width: 440px;
     height: 660px;
     padding: 15px;
-    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -246,4 +246,11 @@ button{
     padding: 2px;
     background-color: #444444;
     color: white;
+}
+
+@media (max-width: 782px) {
+    #caja{
+        flex-direction: column;
+        align-items: center;
+    }
 }
