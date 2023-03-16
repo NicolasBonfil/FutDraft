@@ -158,10 +158,8 @@ const crearCancha = () => {
 const crearSelector = (posicion, arrayJugadores) => {
     let arrayPosicion = arrayJugadores.find((i) => i.posicion === posicion).jugadores;
     selectorHeader.innerHTML = `
-                                <div class="divOjo">
-                                    <img src="./img/ojo.png" alt="" id="ojo">
-                                </div>
-                                <h2>ELIGE UN JUGADOR (${posicion})</h2>
+                                <img src="./img/ojo.png" alt="" id="ojo">
+                                <h2>ELIGE UN JUGADOR</h2>
     `
 
     selectorBody.innerHTML = "";

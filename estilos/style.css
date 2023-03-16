@@ -196,8 +196,7 @@ button{
     color: white;
     font-family: "Poppins", "sans-serif";
     font-size: 16px;
-    line-height: 0;
-    margin: 0;
+
 }
 
 #ojo{
@@ -210,8 +209,8 @@ button{
     height: 16px;
     background-color: transparent;
     position: absolute;
-    top: 277.1px;
-    left: 97px;
+    top: 276.1px;
+    left: 124.5px;
     cursor: none;
     z-index: 1;
 }
@@ -304,5 +303,18 @@ button{
         width: 36.25px;
         font-size: 12px;
         top: 69px;
+    }
+    
+    #mostrarEquipo{
+        top: 243.1px;
+        left: 99.7px;
+    }
+
+    .carta:hover .circuloPosicion{
+        border: none;
+    }
+
+    #selector-body .divCarta:hover{
+        background-color: unset;
     }
 }
