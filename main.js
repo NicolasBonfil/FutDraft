@@ -3,7 +3,7 @@ const canchaSelector = document.getElementById("cancha-selector");
 const selectorBody = document.getElementById("selector-body");
 const selectorHeader = document.getElementById("selector-header");
 const selector = document.getElementById("selector");
-// const ojo = document.getElementById("ojo");
+const mostrarEquipo = document.getElementById("mostrarEquipo");
 
 const jugadorUno = document.getElementById("jugador-uno");
 const jugadorDos = document.getElementById("jugador-dos");
@@ -112,6 +112,24 @@ const arrayJugadores = [
 
 ]
 
+mostrarEquipo.addEventListener("mouseover", () => {
+    verEquipo()
+})
+
+mostrarEquipo.addEventListener("mouseout", () => {
+    ocultarEquipo()
+})
+
+const verEquipo = () => {
+    selector.style.display = "none";
+    cancha.style.filter = "none";
+}
+
+const ocultarEquipo = () => {
+    selector.style.display = "flex";
+    cancha.style.filter = "blur(2.5px)";
+}
+
 const crearCancha = () => {
     cancha.innerHTML = "";
 
@@ -139,14 +157,13 @@ const crearCancha = () => {
 
 const crearSelector = (posicion, arrayJugadores) => {
     let arrayPosicion = arrayJugadores.find((i) => i.posicion === posicion).jugadores;
-    
     selectorHeader.innerHTML = `
                                 <div class="divOjo">
                                     <img src="./img/ojo.png" alt="" id="ojo">
                                 </div>
                                 <h2>ELIGE UN JUGADOR (${posicion})</h2>
-                                `
-    
+    `
+
     selectorBody.innerHTML = "";
     
     ids = [];
@@ -182,6 +199,7 @@ const crearSelector = (posicion, arrayJugadores) => {
                 cancha.style.filter = "none";
                 jugadores.push(arrayPosicion[r]);
                 agregarJugador(posicion, arrayPosicion[r].url, arrayPosicion[r].apellido);
+                pepe = true;
             })
         }, tiempo);
         
