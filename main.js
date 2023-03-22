@@ -5,11 +5,6 @@ const selectorHeader = document.getElementById("selector-header");
 const selector = document.getElementById("selector");
 const mostrarEquipo = document.getElementById("mostrarEquipo");
 
-const jugadorUno = document.getElementById("jugador-uno");
-const jugadorDos = document.getElementById("jugador-dos");
-const jugadorTres = document.getElementById("jugador-tres");
-const jugadorCuatro = document.getElementById("jugador-cuatro");
-
 class Jugador{
     constructor(id, nombre, apellido, posicion, url){
         this.id = id;
